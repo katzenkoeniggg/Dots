@@ -12,7 +12,14 @@ fi
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-bindkey -e
+setopt share_history 
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+
+# completion using arrow keys (based on history)
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
 
 ################################################################################
 # Zsh Completion Setup (Compinit)
@@ -83,7 +90,7 @@ export FZF_CTRL_T_OPTS="
 
 # To make fzf-tab follow FZF_DEFAULT_OPTS.
 # NOTE: This may lead to unexpected behavior since some flags break this plugin. See Aloxaf/fzf-tab#455.
-zstyle ':fzf-tab:*' use-fzf-default-opts yes
+#zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
 ################################################################################
 # zoxide Initialization (Directory Jumping)
@@ -106,7 +113,7 @@ alias pakun="flatpak uninstall"
 alias pakse="flatpak search"
 alias pakrm="flatpak remove --unused"
 alias gamesh="bash gameshell.sh"
-alias ls="eza --color=always --long --all --group-directories-first --git --icons=always --no-time --no-user --no-permissions"
+alias ls="eza --color=always --all --group-directories-first --sort extension --git --icons=always --no-time --no-user --no-permissions"
 alias dload='aria2c -x 8 -s 8 -j 2 -c -d ~/Downloads'
 
 ################################################################################
