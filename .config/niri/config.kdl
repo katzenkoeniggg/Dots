@@ -78,8 +78,8 @@ environment {
     XDG_CURRENT_DESKTOP "niri"
     QT_QPA_PLATFORM "wayland"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
-    QT_QPA_PLATFORMTHEME "qt6ct"
-    QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
+    QT_QPA_PLATFORMTHEME "gtk3"
+    QT_QPA_PLATFORMTHEME_QT6 "gtk3"
     TERMINAL "kitty"
 }
 
@@ -120,8 +120,8 @@ layout {
 
     focus-ring {
         off
-        width 1 
-        active-color "#ba3a2f"
+        width 4 
+        active-color "#ba3a2fee"
         inactive-color "#505050"
         active-gradient from="#ba3a2f" to="#b92215" angle=45
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
@@ -129,9 +129,9 @@ layout {
 
     border {
         off
-        width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
+        width 3
+        active-color "#3c3c3caa"
+        inactive-color "#191919aa"
         urgent-color "#9b0000"
         // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
@@ -139,11 +139,11 @@ layout {
 
     shadow {
         on
-        // draw-behind-window true
+        draw-behind-window true
         softness 30
         spread 5
         offset x=0 y=5
-        color "#0007"
+        color "#1a1a1aee"
     }
 
     struts {
@@ -192,6 +192,13 @@ window-rule {
 
 window-rule {
     match title="Add Widget"
+    open-floating true
+    default-column-width { proportion 0.3; }
+    default-window-height { fixed 500; }
+}
+
+window-rule {
+    match title="Browse Plugins"
     open-floating true
     default-column-width { proportion 0.3; }
     default-window-height { fixed 500; }

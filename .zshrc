@@ -114,6 +114,7 @@ alias pakse="flatpak search"
 alias pakrm="flatpak remove --unused"
 alias gamesh="bash gameshell.sh"
 alias ls="eza --color=always --all --group-directories-first --sort extension --git --icons=always --no-time --no-user --no-permissions"
+#alias ll="ls -lah"
 alias dload='aria2c -x 8 -s 8 -j 2 -c -d ~/Downloads'
 
 ################################################################################
