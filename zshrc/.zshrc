@@ -116,7 +116,8 @@ alias gamesh="bash gameshell.sh"
 alias svim="sudoedit"
 alias ls="eza --color=always --all --group-directories-first --sort extension --git --icons=always --no-time --no-user --no-permissions"
 alias ll="ls -lah"
-alias dload='aria2c -x 8 -s 8 -j 2 -c -d ~/Downloads'
+alias dload="aria2c -x 8 -s 8 -j 2 -c -d ~/Downloads"
+alias ff="fastfetch"
 
 ################################################################################
 # Load Powerlevel10k Configuration (Prompt Customization)
@@ -127,5 +128,6 @@ alias dload='aria2c -x 8 -s 8 -j 2 -c -d ~/Downloads'
 # End of .zshrc
 ################################################################################
 
+export SYSTEMD_EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export EDITOR="nvim"
