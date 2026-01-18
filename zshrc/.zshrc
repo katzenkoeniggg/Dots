@@ -6,6 +6,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+bindkey -e
+
 ################################################################################
 # Shell History and Basic Keybindings
 ################################################################################
@@ -127,7 +129,3 @@ alias ff="fastfetch"
 ################################################################################
 # End of .zshrc
 ################################################################################
-
-export SYSTEMD_EDITOR="nvim"
-export SUDO_EDITOR="nvim"
-export EDITOR="nvim"
